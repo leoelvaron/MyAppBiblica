@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "axios@0.27.2",
+      "destination": "wwwroot/lib/axios/",
+      "files": [
+        "lib/utils.js",
+        "dist/axios.map",
+        "dist/axios.min.js",
+        "dist/axios.min.map",
+        "lib/axios.js",
+        "lib/adapters/http.js",
+        "lib/cancel/CanceledError.js",
+        "lib/adapters/xhr.js",
+        "lib/adapters/README.md",
+        "lib/core/Axios.js",
+        "lib/cancel/isCancel.js",
+        "lib/cancel/CancelToken.js",
+        "lib/defaults/index.js",
+        "lib/core/transformData.js",
+        "lib/core/settle.js",
+        "lib/core/README.md",
+        "lib/core/mergeConfig.js",
+        "lib/core/InterceptorManager.js",
+        "lib/core/dispatchRequest.js",
+        "lib/core/buildFullPath.js",
+        "lib/core/AxiosError.js",
+        "lib/env/data.js",
+        "lib/defaults/env/FormData.js",
+        "lib/defaults/transitional.js",
+        "lib/helpers/bind.js",
+        "lib/env/README.md",
+        "lib/helpers/validator.js",
+        "lib/helpers/toFormData.js",
+        "lib/helpers/spread.js",
+        "lib/helpers/README.md",
+        "lib/helpers/parseProtocol.js",
+        "lib/helpers/parseHeaders.js",
+        "lib/helpers/null.js",
+        "lib/helpers/normalizeHeaderName.js",
+        "lib/helpers/isURLSameOrigin.js",
+        "lib/helpers/isAxiosError.js",
+        "lib/helpers/isAbsoluteURL.js",
+        "lib/helpers/deprecatedMethod.js",
+        "lib/helpers/cookies.js",
+        "lib/helpers/combineURLs.js",
+        "lib/helpers/buildURL.js"
+      ]
+    }
+  ]
+}

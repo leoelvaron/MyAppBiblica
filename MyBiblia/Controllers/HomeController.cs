@@ -19,36 +19,39 @@ namespace MyBiblia.Controllers
         [HttpGet]
         public async Task<IActionResult> Lista_De_Libros()
         {
-            var Url = "https://localhost:7150/api/Libros/Libros";
-
-            using (var client = new HttpClient())
+            try
             {
-                var respuesta = await client.GetAsync(Url);
+                var Url = "https://localhost:7150/api/Libros/Libros";
 
-                switch (respuesta.StatusCode)
+                using (var client = new HttpClient())
                 {
-                    case System.Net.HttpStatusCode.OK:
+                    var respuesta = await client.GetAsync(Url);
 
-                        var myData = await respuesta.Content.ReadAsStringAsync();
+                    switch (respuesta.StatusCode)
+                    {
+                        case System.Net.HttpStatusCode.OK:
 
-                        return Json(new {result = myData});
+                            var myData = await respuesta.Content.ReadAsStringAsync();
 
-                    case System.Net.HttpStatusCode.Created:
-                        break;
-                    case System.Net.HttpStatusCode.Accepted:
-                        break;
-                    case System.Net.HttpStatusCode.Found:
-                        break;
+                            return Json(new { result = myData });
+                        case System.Net.HttpStatusCode.Accepted:
+                            break;
+                        case System.Net.HttpStatusCode.Found:
+                            break;
+                        case System.Net.HttpStatusCode.BadRequest:
 
-                    case System.Net.HttpStatusCode.BadRequest:
-                        break;
+                            return BadRequest();
+                        case System.Net.HttpStatusCode.NotFound:
+                            return NotFound();
 
-                    case System.Net.HttpStatusCode.NotFound:
-                        break;
+                    }
 
+                    return NotFound();
                 }
-
-                return null;
+            }
+            catch (Exception err)
+            {
+                return NotFound(err.Message);
             }
         }
 

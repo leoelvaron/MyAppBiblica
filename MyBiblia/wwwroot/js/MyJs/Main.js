@@ -16,6 +16,10 @@ const Libros = async () => {
            <tr>
               <td>${e.nombre}</td>
               <td>${e.descripcion}</td>
+               <td>
+                  <button onclick="modalReutilizable()" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button>
+                  <button onclick="EliminarTarea(${e.id})" class="btn btn-danger">Eliminar</button>
+              </td>
            </tr>`
 
             console.log(e.Id);
@@ -23,4 +27,8 @@ const Libros = async () => {
         })
         console.log(res.data.result)
     }
+}
+
+const EliminarTarea = (id) => {
+    alert("eliminar " + id)
 }

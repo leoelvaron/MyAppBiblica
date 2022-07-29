@@ -36,4 +36,5 @@ const EliminarTarea = (id) => {
     let respuesta = await axios.delete(url);
 
     console.log(respuesta.result);
+    console.log("f");
 }

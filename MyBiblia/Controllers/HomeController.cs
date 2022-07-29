@@ -55,6 +55,27 @@ namespace MyBiblia.Controllers
             }
         }
 
+        // Eliminar
+        [HttpDelete]
+        public async Task<IActionResult> Eliminar(int id)
+        {
+            string Url = $"https://localhost:7150/api/Libros/Eliminar/{id}";
+
+            using (var client = new HttpClient())
+            {
+               var res = await client.DeleteAsync(Url);
+
+                if (res.IsSuccessStatusCode)
+                {
+                  var contenString = await res.Content.ReadAsStringAsync();
+
+                    return Json(new { result = contenString });
+                }
+            }
+
+            return Json(new { result = NotFound()});
+        }
+
         // VISTAS
         public IActionResult Index()
         {

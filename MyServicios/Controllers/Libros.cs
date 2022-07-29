@@ -9,21 +9,22 @@ namespace MyServicios.Controllers
     [ApiController]
     public class Libros : ControllerBase
     {
+        public List<VM_Libros> MiLista { get; set; }
+
+
       // Obtener todos los libros de la biblia
         [Route("Libros")]
         [HttpGet]
         public List<VM_Libros> Lista_De_Libros()
         {
-            // Lista de libros biblicos
-            List<VM_Libros> lista = new() {
-                new VM_Libros(){ Id = 1, Nombre = "Genesis",      Descripcion = "Creacion del mundo", Capitulos = 50 },
-                new VM_Libros(){ Id = 2, Nombre = "Exodo",        Descripcion = "Israel en Egipto",   Capitulos = 40 },
-                new VM_Libros(){ Id = 3, Nombre = "Leviticos",    Descripcion = "Las leyes",          Capitulos = 27 },
-                new VM_Libros(){ Id = 4, Nombre = "Numeros",      Descripcion = "Segunda leyes",      Capitulos = 36 },
-                new VM_Libros(){ Id = 5, Nombre = "Deuteronomio", Descripcion = "Mandamientos",       Capitulos = 34 },
-            };
-
-          return lista;
+            this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };   
+            //MiLista.Add(new VM_Libros() { Id = 1, Nombre = "Genesis", Descripcion = "Creacion del mundo", Capitulos = 50 });
+            //MiLista.Add(new VM_Libros() { Id = 2, Nombre = "Exodo", Descripcion = "Israel en Egipto", Capitulos = 40 });
+            //MiLista.Add(new VM_Libros() { Id = 3, Nombre = "Leviticos", Descripcion = "Las leyes", Capitulos = 27 });
+            //MiLista.Add(new VM_Libros() { Id = 4, Nombre = "Numeros", Descripcion = "Segunda leyes", Capitulos = 36 });
+            //MiLista.Add(new VM_Libros() { Id = 5, Nombre = "Deuteronomio", Descripcion = "Mandamientos", Capitulos = 34 });
+            
+            return MiLista;
         }
 
         // Agregar Libro, ojo tomando en cuenta que a la biblia no se le agrega libros, aqui solo agregue 5.
@@ -67,6 +68,9 @@ namespace MyServicios.Controllers
         [HttpDelete]
         public string Eliminar(int id)
         {
+
+             MiLista.Remove(new VM_Libros() { Id = id});
+
             return $"Se ha eliminado el libro de ID: {id}";
         }
     }

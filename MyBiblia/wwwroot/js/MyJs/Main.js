@@ -30,5 +30,10 @@ const Libros = async () => {
 }
 
 const EliminarTarea = (id) => {
-    alert("eliminar " + id)
+
+    let url = `https://localhost:7205/Home/Eliminar/${id}`;
+
+    let respuesta = await axios.delete(url);
+
+    console.log(respuesta.result);
 }

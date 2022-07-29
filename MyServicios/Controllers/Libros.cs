@@ -17,12 +17,12 @@ namespace MyServicios.Controllers
         [HttpGet]
         public List<VM_Libros> Lista_De_Libros()
         {
+            this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
+            this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
+            this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
+            this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
             this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };   
-            //MiLista.Add(new VM_Libros() { Id = 1, Nombre = "Genesis", Descripcion = "Creacion del mundo", Capitulos = 50 });
-            //MiLista.Add(new VM_Libros() { Id = 2, Nombre = "Exodo", Descripcion = "Israel en Egipto", Capitulos = 40 });
-            //MiLista.Add(new VM_Libros() { Id = 3, Nombre = "Leviticos", Descripcion = "Las leyes", Capitulos = 27 });
-            //MiLista.Add(new VM_Libros() { Id = 4, Nombre = "Numeros", Descripcion = "Segunda leyes", Capitulos = 36 });
-            //MiLista.Add(new VM_Libros() { Id = 5, Nombre = "Deuteronomio", Descripcion = "Mandamientos", Capitulos = 34 });
+           
             
             return MiLista;
         }

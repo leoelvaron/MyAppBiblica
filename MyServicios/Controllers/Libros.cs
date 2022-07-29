@@ -9,7 +9,7 @@ namespace MyServicios.Controllers
     [ApiController]
     public class Libros : ControllerBase
     {
-        public List<VM_Libros> MiLista = new List<VM_Libros>();
+        public List<VM_Libros> MiLista = new();
 
 
       // Obtener todos los libros de la biblia
@@ -17,12 +17,11 @@ namespace MyServicios.Controllers
         [HttpGet]
         public List<VM_Libros> Lista_De_Libros()
         {
-            MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
-            MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
-            MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
-            MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
-            MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
-            MiLista.Add(new VM_Libros() { Nombre = "pepe", Descripcion = "col", Capitulos = 100, Id = 2 });
+            MiLista.Add(new VM_Libros() { Nombre = "Genesis", Descripcion = "La creacion", Capitulos = 50, Id = 1 });
+            MiLista.Add(new VM_Libros() { Nombre = "Exodo", Descripcion = "El pueblo de Israel", Capitulos = 40, Id = 2 });
+            MiLista.Add(new VM_Libros() { Nombre = "Levitico", Descripcion = "Las leyes 1", Capitulos = 27, Id = 3 });
+            MiLista.Add(new VM_Libros() { Nombre = "Numeros", Descripcion = "Leyes para el pueblo", Capitulos = 36, Id = 4 });
+            MiLista.Add(new VM_Libros() { Nombre = "Deuteronomio", Descripcion = "Las leyes", Capitulos = 34, Id = 5 });
 
             return MiLista;
         }

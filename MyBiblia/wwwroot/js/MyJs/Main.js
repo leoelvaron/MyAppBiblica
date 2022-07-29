@@ -29,7 +29,7 @@ const Libros = async () => {
     }
 }
 
-const EliminarTarea = (id) => {
+const EliminarTarea = async (id) => {
 
     let url = `https://localhost:7205/Home/Eliminar/${id}`;
 

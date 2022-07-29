@@ -9,7 +9,7 @@ namespace MyServicios.Controllers
     [ApiController]
     public class Libros : ControllerBase
     {
-        public List<VM_Libros> MiLista { get; set; }
+        public List<VM_Libros> MiLista = new List<VM_Libros>();
 
 
       // Obtener todos los libros de la biblia
@@ -17,11 +17,11 @@ namespace MyServicios.Controllers
         [HttpGet]
         public List<VM_Libros> Lista_De_Libros()
         {
-            this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
-            this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
-            this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
-            this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
-            this.MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };   
+            MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
+            MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
+            MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
+            MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };
+            MiLista = new List<VM_Libros>() { new VM_Libros() {Id = 1, Nombre = "juan" ,Descripcion = "libro", Capitulos = 3 } };   
            
             
             return MiLista;
